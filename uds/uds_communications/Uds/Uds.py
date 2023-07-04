@@ -158,7 +158,11 @@ class Uds(object):
     def disconnect(self):
 
         self.tp.closeConnection()
-        
+
+    def reconnect(self, delay_time):
+
+        self.tp.resetConnection(delay_time)
+
     ##
     # @brief
     def isTransmitting(self):
